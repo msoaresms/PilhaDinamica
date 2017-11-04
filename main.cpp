@@ -1,30 +1,7 @@
 #include <iostream>
+#include "Item.h"
 using namespace std;
 
-class Item{
-private:
-    int chave;
-    string descricao;
-public:
-    Item(){}
-    Item(int pChave, string pDescricao){
-        this->chave = pChave;
-        this->descricao = pDescricao;
-    }
-    int getChave() const {
-        return chave;
-    }
-    void setChave(int chave) {
-        Item::chave = chave;
-    }
-    string getDescricao() const {
-        return descricao;
-    }
-    void setDescricao(string descricao) {
-        Item::descricao = descricao;
-    }
-    void mostrar();
-};
 
 template <class T>
 class No{
@@ -77,10 +54,7 @@ public:
     void desempilha(T *);
 };
 
-void Item::mostrar() {
-    cout << "Descricao: " << this->descricao << endl;
-    cout << "Chave: " << this->chave << endl << endl;
-}
+
 
 template <typename T>
 void Pilha<T>::empilha(T pItem) {
